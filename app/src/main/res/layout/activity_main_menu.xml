@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:id = "@+id/starters"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:src="@drawable/starters"
+            android:layout_toLeftOf="@id/desserts"
+            android:layout_toStartOf="@id/desserts"
+            android:onClick="starters_mainsClicked"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/starters_link" />
+
+        <ImageView
+            android:id = "@+id/desserts"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:src="@drawable/desserts"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            android:onClick="desserts_mainsClicked"
+            android:contentDescription="@string/desserts_link" />
+
+        <ImageView
+            android:id = "@+id/order_mains"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:src="@drawable/order"
+            android:layout_toRightOf="@id/desserts"
+            android:layout_toEndOf="@id/desserts"
+            android:onClick="order_mainsClicked"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/order_link"
+            />
+
+        <TextView
+            android:id="@+id/mains"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_below="@id/desserts"
+            android:layout_marginTop="16dp"
+            android:text="@string/mains"
+            android:textSize="32sp" />
+
+
+        <TextView
+            android:id="@+id/gyros_open_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mains"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/gyros_open"
+            android:textSize="24sp" />
+
+
+        <TextView
+            android:id="@+id/gyros_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gyros_open_text"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/gyros_description"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/gyros_open_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/gyros_description"
+            android:onClick="gyros_open_decrement"
+            android:layout_toLeftOf="@id/gyros_open_quantity_text_view"
+            android:layout_toStartOf="@id/gyros_open_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/gyros_open_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/gyros_description"
+            android:layout_toLeftOf="@id/gyros_open_increment"
+            android:layout_toStartOf="@id/gyros_open_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/gyros_open_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/gyros_description"
+            android:onClick="gyros_open_increment"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/gyros_open_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open"
+            android:textSize="16sp"
+            android:layout_margin="16dp"
+            android:layout_below="@id/gyros_description"
+            android:layout_toLeftOf="@id/gyros_price_open"
+            android:layout_toStartOf="@id/gyros_price_open"
+            />
+
+        <TextView
+            android:id="@+id/gyros_price_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gyros_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_toLeftOf="@id/gyros_open_decrement"
+            android:layout_toStartOf="@id/gyros_open_decrement"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/gyros_price_open"
+            />
+
+        <TextView
+            android:id="@+id/gyros_wrapped_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gyros_open_price_text"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/gyros_wrapped"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/gyros_wrapped_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/gyros_wrapped_text"
+            android:onClick="gyros_wrapped_decrement"
+            android:layout_toLeftOf="@id/gyros_wrapped_quantity_text_view"
+            android:layout_toStartOf="@id/gyros_wrapped_quantity_text_view"
+            android:layout_marginTop="16dp"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/gyros_wrapped_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_below="@id/gyros_wrapped_text"
+            android:layout_toLeftOf="@id/gyros_wrapped_increment"
+            android:layout_toStartOf="@id/gyros_wrapped_increment"
+            android:layout_marginTop="16dp"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/gyros_wrapped_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/gyros_wrapped_text"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="gyros_wrapped_increment"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/gyros_wrapped_price_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wrapped"
+            android:textSize="16sp"
+            android:layout_margin="24dp"
+            android:layout_below="@id/gyros_wrapped_text"
+            android:layout_toLeftOf="@id/gyros_price_wrapped"
+            android:layout_toStartOf="@id/gyros_price_open"
+            />
+        <TextView
+            android:id="@+id/gyros_price_wrapped"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gyros_wrapped_text"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_toLeftOf="@id/gyros_wrapped_decrement"
+            android:layout_toStartOf="@id/gyros_wrapped_decrement"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/gyros_price_wrapped"
+            />
+
+
+        <TextView
+            android:id="@+id/mixed_souvlaki_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gyros_price_wrapped"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/mixed_souvlaki"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/mixed_souvlaki_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/gyros_price_wrapped"
+            android:onClick="mixed_souvlaki_decrement"
+            android:layout_toLeftOf="@id/mixed_souvlaki_quantity_text_view"
+            android:layout_toStartOf="@id/mixed_souvlaki_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/mixed_souvlaki_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/gyros_price_wrapped"
+            android:layout_toLeftOf="@id/mixed_souvlaki_increment"
+            android:layout_toStartOf="@id/mixed_souvlaki_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/mixed_souvlaki_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/gyros_price_wrapped"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="mixed_souvlaki_increment"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/mixed_souvlaki_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mixed_souvlaki_text"
+            android:text="@string/mixed_souvlaki_description"
+            android:textSize="20sp"
+            android:layout_margin="24dp"/>
+
+        <TextView
+            android:id="@+id/mixed_souvlaki_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mixed_souvlaki_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/mixed_souvlaki_price"
+            />
+
+        <TextView
+            android:id="@+id/pork_souvlaki_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mixed_souvlaki_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/pork_souvlaki"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/pork_souvlaki_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/mixed_souvlaki_price"
+            android:onClick="pork_souvlaki_decrement"
+            android:layout_toLeftOf="@id/pork_souvlaki_quantity_text_view"
+            android:layout_toStartOf="@id/pork_souvlaki_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/pork_souvlaki_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/mixed_souvlaki_price"
+            android:layout_toLeftOf="@id/pork_souvlaki_increment"
+            android:layout_toStartOf="@id/pork_souvlaki_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/pork_souvlaki_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/mixed_souvlaki_price"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="pork_souvlaki_increment"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/pork_souvlaki_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pork_souvlaki_text"
+            android:text="@string/pork_souvlaki_description"
+            android:textSize="20sp"
+            android:layout_margin="24dp"/>
+
+        <TextView
+            android:id="@+id/pork_souvlaki_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pork_souvlaki_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/pork_souvlaki_price"
+            />
+
+        <TextView
+            android:id="@+id/chicken_souvlaki_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pork_souvlaki_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/chicken_souvlaki"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/chicken_souvlaki_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/pork_souvlaki_price"
+            android:onClick="chicken_souvlaki_decrement"
+            android:layout_toLeftOf="@id/chicken_souvlaki_quantity_text_view"
+            android:layout_toStartOf="@id/chicken_souvlaki_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/chicken_souvlaki_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/pork_souvlaki_price"
+            android:layout_toLeftOf="@id/chicken_souvlaki_increment"
+            android:layout_toStartOf="@id/chicken_souvlaki_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/chicken_souvlaki_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/pork_souvlaki_price"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="chicken_souvlaki_increment"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+
+
+        <TextView
+            android:id="@+id/chicken_souvlaki_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chicken_souvlaki_text"
+            android:text="@string/chicken_souvlaki_description"
+            android:textSize="20sp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            />
+
+        <TextView
+            android:id="@+id/chicken_souvlaki_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chicken_souvlaki_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/chicken_souvlaki_price"
+            />
+
+
+        <TextView
+            android:id="@+id/yiaourtlou_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chicken_souvlaki_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/yiaourtlou"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/yiaourtlou_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/chicken_souvlaki_price"
+            android:onClick="yiaourtlou_decrement"
+            android:layout_toLeftOf="@id/yiaourtlou_quantity_text_view"
+            android:layout_toStartOf="@id/yiaourtlou_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/yiaourtlou_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/chicken_souvlaki_price"
+            android:layout_toLeftOf="@id/yiaourtlou_increment"
+            android:layout_toStartOf="@id/yiaourtlou_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/yiaourtlou_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/chicken_souvlaki_price"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="yiaourtlou_increment"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/yiaourtlou_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_below="@id/yiaourtlou_increment"
+            android:text="@string/yiaourtlou_description"
+            android:layout_margin="24dp"/>
+
+        <TextView
+            android:id="@+id/yiaourtlou_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/yiaourtlou_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/yiaourtlou_price"
+            />
+
+        <TextView
+            android:id="@+id/seftalies_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/yiaourtlou_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/seftalies"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/seftalies_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/yiaourtlou_price"
+            android:onClick="seftalies_decrement"
+            android:layout_toLeftOf="@id/seftalies_quantity_text_view"
+            android:layout_toStartOf="@id/seftalies_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/seftalies_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/yiaourtlou_price"
+            android:layout_toLeftOf="@id/seftalies_increment"
+            android:layout_toStartOf="@id/seftalies_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/seftalies_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/yiaourtlou_price"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="seftalies_increment"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/seftalies_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seftalies_text"
+            android:textSize="20sp"
+            android:text="@string/seftalies_description"
+            android:layout_margin="24dp"/>
+
+        <TextView
+            android:id="@+id/seftalies_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seftalies_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/seftalies_price"
+            />
+
+        <TextView
+            android:id="@+id/moshari_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seftalies_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/moshari"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/moshari_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/seftalies_price"
+            android:onClick="moshari_decrement"
+            android:layout_toLeftOf="@id/moshari_quantity_text_view"
+            android:layout_toStartOf="@id/moshari_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/moshari_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/seftalies_price"
+            android:layout_toLeftOf="@id/moshari_increment"
+            android:layout_toStartOf="@id/moshari_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/moshari_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/seftalies_price"
+            android:onClick="moshari_increment"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/moshari_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/moshari_text"
+            android:text="@string/moshari_description"
+            android:textSize="20sp"
+            android:layout_margin="24dp"/>
+
+        <TextView
+            android:id="@+id/moshari_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/moshari_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/moshari_price"
+            />
+
+        <TextView
+            android:id="@+id/meat_moussaka_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/moshari_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/meat_moussaka"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/meat_moussaka_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/moshari_price"
+            android:onClick="meat_moussaka_decrement"
+            android:layout_toLeftOf="@id/meat_moussaka_quantity_text_view"
+            android:layout_toStartOf="@id/meat_moussaka_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/meat_moussaka_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/moshari_price"
+            android:layout_toLeftOf="@id/meat_moussaka_increment"
+            android:layout_toStartOf="@id/meat_moussaka_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/meat_moussaka_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/moshari_price"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="meat_moussaka_increment"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/meat_moussaka_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meat_moussaka_text"
+            android:text="@string/meat_moussaka_description"
+            android:textSize="20sp"
+            android:layout_margin="24dp"/>
+
+
+
+        <TextView
+            android:id="@+id/meat_moussaka_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meat_moussaka_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/meat_moussaka_price"
+            />
+
+        <TextView
+            android:id="@+id/veg_moussaka_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meat_moussaka_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/veg_moussaka"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/veg_moussaka_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/meat_moussaka_price"
+            android:onClick="veg_moussaka_decrement"
+            android:layout_toLeftOf="@id/veg_moussaka_quantity_text_view"
+            android:layout_toStartOf="@id/veg_moussaka_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/veg_moussaka_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/meat_moussaka_price"
+            android:layout_toLeftOf="@id/veg_moussaka_increment"
+            android:layout_toStartOf="@id/veg_moussaka_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/veg_moussaka_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/meat_moussaka_price"
+            android:onClick="veg_moussaka_increment"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/veg_moussaka_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/veg_moussaka_text"
+            android:text="@string/veg_moussaka_description"
+            android:textSize="20sp"
+            android:layout_margin="24dp"/>
+
+
+
+        <TextView
+            android:id="@+id/veg_moussaka_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/veg_moussaka_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/veg_moussaka_price"
+            />
+
+
+        <TextView
+            android:id="@+id/spanakopita_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/veg_moussaka_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/spanakopita"
+            android:textSize="24sp" />
+
+
+
+        <Button
+            android:id="@+id/spanakopita_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/veg_moussaka_price"
+            android:onClick="spanakopita_decrement"
+            android:layout_toLeftOf="@id/spanakopita_quantity_text_view"
+            android:layout_toStartOf="@id/spanakopita_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/spanakopita_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/veg_moussaka_price"
+            android:layout_toLeftOf="@id/spanakopita_increment"
+            android:layout_toStartOf="@id/spanakopita_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/spanakopita_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/veg_moussaka_price"
+            android:onClick="spanakopita_increment"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/spanakopita_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spanakopita_text"
+            android:text="@string/spanakopita_description"
+            android:textSize="20sp"
+            android:layout_margin="24dp"/>
+
+
+        <TextView
+            android:id="@+id/spanakopita_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spanakopita_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/spanakopita_price"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>

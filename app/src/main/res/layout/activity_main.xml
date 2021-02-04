@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:ignore="ExtraText">
+
+    tools:context="com.cullendevelopment.takeawayapp.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/titleheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/colorPrimary"
+            android:contentDescription="@string/title_header"
+            android:src="@drawable/yiannislogo" />
+
+        <ImageView
+            android:id="@+id/starters"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/yellow_bar"
+            android:layout_margin="16dp"
+            android:layout_toStartOf="@id/mains"
+            android:layout_toLeftOf="@id/mains"
+            android:contentDescription="@string/starters_link"
+            android:onClick="starters_homeClicked"
+            android:src="@drawable/starters" />
+
+
+        <ImageView
+            android:id="@+id/mains"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/yellow_bar"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/mains_link"
+            android:onClick="mains_homeClicked"
+            android:src="@drawable/mains" />
+
+        <ImageView
+            android:id="@+id/desserts"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/yellow_bar"
+            android:layout_margin="16dp"
+            android:layout_toEndOf="@id/mains"
+            android:layout_toRightOf="@id/mains"
+            android:contentDescription="@string/desserts_link"
+            android:onClick="desserts_homeClicked"
+            android:src="@drawable/desserts" />
+
+        <EditText
+            android:id="@+id/nameBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/telephone"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/addName"
+            android:inputType="textCapWords"
+            tools:ignore="Autofill" />
+
+
+
+
+        <EditText
+            android:id="@+id/your_telephone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nameBar"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/addTelephone"
+            android:inputType="text|phone"
+            tools:ignore="Autofill" />
+
+        <EditText
+            android:id="@+id/collect_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/your_telephone"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/time"
+            android:inputType="text|time"
+            tools:ignore="Autofill"/>
+
+
+
+
+
+        <ImageView
+            android:id="@+id/submit_order"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/collect_time"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            android:onClick="submitOrder"
+            android:src="@drawable/submitorder2"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/reset"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/submit_order"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            android:onClick="reset"
+            android:src="@drawable/reset"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/yiannis_leaf"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/reset"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/leaf"
+            android:src="@drawable/yiannis_leaf" />
+
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mains"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:text="@string/address"
+            android:textSize="24sp" />
+
+
+        <TextView
+            android:id="@+id/telephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/address"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:text="@string/telephone"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/yellow_bar"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@id/titleheader"
+            android:layout_marginBottom="16dp"
+            android:background="@color/yellow" />
+
+    </RelativeLayout>
+
+</ScrollView>
+
+

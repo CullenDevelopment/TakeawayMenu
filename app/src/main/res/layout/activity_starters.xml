@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:id = "@+id/mains"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:src="@drawable/mains"
+            android:layout_toLeftOf="@id/desserts"
+            android:layout_toStartOf="@id/desserts"
+            android:layout_margin="16dp"
+            android:onClick="mains_startersClicked"
+            android:contentDescription="@string/mains_link" />
+
+        <ImageView
+            android:id = "@+id/desserts"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:src="@drawable/desserts"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="16dp"
+            android:onClick="desserts_startersClicked"
+            android:contentDescription="@string/desserts_link" />
+
+        <ImageView
+            android:id = "@+id/order"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:src="@drawable/order"
+            android:layout_toRightOf="@id/desserts"
+            android:layout_toEndOf="@id/desserts"
+            android:onClick="home_startersClicked"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/order_link"
+            />
+
+
+        <TextView
+            android:id="@+id/starters"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_below="@id/desserts"
+            android:text="@string/starters"
+            android:textSize="32sp" />
+
+
+
+
+        <TextView
+            android:id="@+id/halloumi_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/starters"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/halloumi"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/halloumi_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/starters"
+            android:onClick="halloumi_decrement"
+            android:layout_toLeftOf="@id/halloumi_quantity_text_view"
+            android:layout_toStartOf="@id/halloumi_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/halloumi_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/starters"
+            android:layout_toLeftOf="@id/halloumi_increment"
+            android:layout_toStartOf="@id/halloumi_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/halloumi_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/starters"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="halloumi_increment"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+
+
+        <TextView
+            android:id="@+id/halloumi_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/halloumi_text"
+            android:text="@string/halloumi_description"
+            android:textSize="20sp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            />
+
+        <TextView
+            android:id="@+id/halloumi_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/halloumi_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/halloumi_price"
+            />
+
+
+        <TextView
+            android:id="@+id/kolokithokeftedes_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/halloumi_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/kolokithokeftedes"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/kolokithokeftedes_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/halloumi_price"
+            android:onClick="kolokithokeftedes_decrement"
+            android:layout_toLeftOf="@id/kolokithokeftedes_quantity_text_view"
+            android:layout_toStartOf="@id/kolokithokeftedes_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/kolokithokeftedes_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/halloumi_price"
+            android:layout_toLeftOf="@id/halloumi_increment"
+            android:layout_toStartOf="@id/halloumi_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/kolokithokeftedes_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/halloumi_price"
+            android:onClick="kolokithokeftedes_increment"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/kolokithokeftedes_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/kolokithokeftedes_text"
+            android:text="@string/kolokithokeftedes_description"
+            android:textSize="20sp"
+            android:layout_margin="24dp"/>
+
+        <TextView
+            android:id="@+id/kolokithokeftedes_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/kolokithokeftedes_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/kolokithokeftedes_price"
+            />
+
+        <TextView
+            android:id="@+id/keftedes_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/kolokithokeftedes_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/keftedes"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/keftedes_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/kolokithokeftedes_price"
+            android:onClick="keftedes_decrement"
+            android:layout_toLeftOf="@id/keftedes_quantity_text_view"
+            android:layout_toStartOf="@id/keftedes_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/keftedes_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/kolokithokeftedes_price"
+            android:layout_toLeftOf="@id/keftedes_increment"
+            android:layout_toStartOf="@id/keftedes_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/keftedes_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/kolokithokeftedes_price"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="keftedes_increment"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/keftedes_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/keftedes_text"
+            android:text="@string/keftedes_description"
+            android:textSize="20sp"
+            android:layout_margin="24dp"/>
+
+        <TextView
+            android:id="@+id/keftedes_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/keftedes_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/keftedes_price"
+            />
+
+        <TextView
+            android:id="@+id/halloumi_pancetta_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/keftedes_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/halloumi_pancetta"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/halloumi_pancetta_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/keftedes_price"
+            android:onClick="halloumi_pancetta_decrement"
+            android:layout_toLeftOf="@id/halloumi_quantity_text_view"
+            android:layout_toStartOf="@id/halloumi_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/halloumi_pancetta_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/keftedes_price"
+            android:layout_toLeftOf="@id/halloumi_increment"
+            android:layout_toStartOf="@id/halloumi_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/halloumi_pancetta_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/keftedes_price"
+            android:onClick="halloumi_pancetta_increment"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+
+
+        <TextView
+            android:id="@+id/halloumi_pancetta_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/halloumi_pancetta_text"
+            android:text="@string/halloumi_pancetta_description"
+            android:textSize="20sp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            />
+
+        <TextView
+            android:id="@+id/halloumi_pancetta_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/halloumi_pancetta_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/halloumi_pancetta_price"
+            />
+
+
+        <TextView
+            android:id="@+id/calamari_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/halloumi_pancetta_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/calamari"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/calamari_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/halloumi_pancetta_price"
+            android:onClick="calamari_decrement"
+            android:layout_toLeftOf="@id/kolokithokeftedes_quantity_text_view"
+            android:layout_toStartOf="@id/kolokithokeftedes_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/calamari_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/halloumi_pancetta_price"
+            android:layout_toLeftOf="@id/calamari_increment"
+            android:layout_toStartOf="@id/calamari_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/calamari_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/halloumi_pancetta_price"
+            android:layout_alignParentRight="true"
+            android:onClick="calamari_increment"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/calamari_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:layout_below="@id/calamari_increment"
+            android:text="@string/calimari_description"
+            android:layout_margin="24dp"/>
+
+        <TextView
+            android:id="@+id/calamari_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calamari_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/calamari_price"
+            />
+
+        <TextView
+            android:id="@+id/salad_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/calamari_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/salad"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/salad_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/salad_text"
+            android:onClick="salad_decrement"
+            android:layout_toLeftOf="@id/keftedes_quantity_text_view"
+            android:layout_toStartOf="@id/keftedes_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/salad_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/salad_text"
+            android:layout_toLeftOf="@id/keftedes_increment"
+            android:layout_toStartOf="@id/keftedes_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/salad_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/salad_text"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="salad_increment"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/salad_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/salad_text"
+            android:textSize="20sp"
+            android:text="@string/salad_description"
+            android:layout_margin="24dp"/>
+
+        <TextView
+            android:id="@+id/salad_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/salad_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/salad_price"
+            />
+
+        <TextView
+            android:id="@+id/patzarosalata_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/salad_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/patzarosalata"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/patzarosalata_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/salad_price"
+            android:onClick="patzarosalata_decrement"
+            android:layout_toLeftOf="@id/patzarosalata_quantity_text_view"
+            android:layout_toStartOf="@id/patzarosalata_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/patzarosalata_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/salad_price"
+            android:layout_toLeftOf="@id/keftedes_increment"
+            android:layout_toStartOf="@id/keftedes_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/patzarosalata_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/salad_price"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="patzarosalata_increment"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+        <TextView
+            android:id="@+id/patzarosalata_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/patzarosalata_text"
+            android:text="@string/patzarosalata_description"
+            android:textSize="20sp"
+            android:layout_margin="24dp"/>
+
+        <TextView
+            android:id="@+id/patzarosalata_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/patzarosalata_description"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/patzarosalata_price"
+            />
+
+        <TextView
+            android:id="@+id/hummus_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/patzarosalata_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/hummus"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/hummus_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/patzarosalata_price"
+            android:onClick="hummus_decrement"
+            android:layout_toLeftOf="@id/hummus_quantity_text_view"
+            android:layout_toStartOf="@id/hummus_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/hummus_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/patzarosalata_price"
+            android:layout_toLeftOf="@id/hummus_increment"
+            android:layout_toStartOf="@id/hummus_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/hummus_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/patzarosalata_price"
+            android:layout_alignParentRight="true"
+            android:onClick="hummus_increment"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+
+
+        <TextView
+            android:id="@+id/hummus_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hummus_text"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/hummus_price"
+            />
+
+
+        <TextView
+            android:id="@+id/tsatziki_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/hummus_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/tsatziki"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/tsatziki_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/hummus_price"
+            android:onClick="tsatziki_decrement"
+            android:layout_toLeftOf="@id/kolokithokeftedes_quantity_text_view"
+            android:layout_toStartOf="@id/kolokithokeftedes_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/tsatziki_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/hummus_price"
+            android:layout_toLeftOf="@id/tsatziki_increment"
+            android:layout_toStartOf="@id/tsatziki_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/tsatziki_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/hummus_price"
+            android:layout_alignParentRight="true"
+            android:onClick="tsatziki_increment"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+
+        <TextView
+            android:id="@+id/tsatziki_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tsatziki_text"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/tsatziki_price"
+            />
+
+        <TextView
+            android:id="@+id/tirokafteri_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tsatziki_price"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:text="@string/tirokafteri"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/tirokafteri_decrement"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/tsatziki_price"
+            android:onClick="tirokafteri_decrement"
+            android:layout_toLeftOf="@id/tirokafteri_quantity_text_view"
+            android:layout_toStartOf="@id/tirokafteri_quantity_text_view"
+            android:text="@string/minus" />
+
+        <TextView
+            android:id="@+id/tirokafteri_quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/tsatziki_price"
+            android:layout_toLeftOf="@id/tirokafteri_increment"
+            android:layout_toStartOf="@id/tirokafteri_increment"
+            android:text="@string/number"
+            android:textColor="#000000"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/tirokafteri_increment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/tsatziki_price"
+            android:onClick="tirokafteri_increment"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:text="@string/plus" />
+
+
+
+        <TextView
+            android:id="@+id/tirokafteri_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tirokafteri_increment"
+            android:layout_marginBottom="24dp"
+            android:textSize="24sp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd = "16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/tirokafteri_price"
+            />
+
+    </RelativeLayout>
+
+</ScrollView>
